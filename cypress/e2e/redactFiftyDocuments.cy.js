@@ -14,6 +14,6 @@ describe('template spec', () => {
     //cy.get('#introJsWizardTourStep1 > .redaction__type__item__image').click()
     cy.get('.my-3 > .mat-mdc-form-field > .mat-mdc-text-field-wrapper > .mat-mdc-form-field-flex > .mat-mdc-form-field-infix')
      .type('1015447687')
-     cy.get('.button--fill').click()
+     cy.get('.button--fill').click();
       })
 })
