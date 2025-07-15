@@ -22,11 +22,13 @@ describe('template spec', () => {
     cy.visit('https://uat.redactable.ai')
    //cy.get('#username').type('uqg3609@vogco.com').wait(3000)
    // cy.get('#username').type('tba79759@zccck.com').wait(3000)
-    cy.get('#username').type('fawad+test@clickaway.io').wait(3000)
-    cy.get('#password').type('Test@1234')
+    cy.get('#username').type('fawad+test@clickaway.io',{timeout: 10000})
+    cy.get('#password').type('Test@1234', {timeout: 10000})
     cy.get('.custom-button').click()
     cy.wait(4000)
+    if(ReportBody.includes('introjs-skipbutton')) {
     cy.get('.introjs-skipbutton').click()
+  }
     cy.wait(1000)
     cy.get(':nth-child(1) > .cards__item > .cards__footer > .open-file').click()
     .wait(3000)
